@@ -1,3 +1,13 @@
+function body_space(details) {
+    let count = 0;
+    for(count =0; count<details.length; count++){
+        details[`target`][counter][`style`][`width`] = `60vw`;
+        details[`target`][counter][`style`][`margin`] = `auto`;
+    }
+    
+}
+let body_tag = document.getElementById(`body`);
+    body_tag.addEventListener(`click`, body_space);
 
 
 
@@ -13,11 +23,10 @@ let header_id = document.getElementById(`included`);
 header_id.addEventListener(`click`, header_clicked);
 
 
-// below function will change the html content and font-size,padding and color when user hover the mouse over what is my name?
+// below function will change the html content and font-size,color when user hover the mouse over what is my name?
 function guess_name(details) {
     details[`target`][`style`][`fontSize`] = `2rem`;
     details[`target`][`innerHTML`] = `<p>My Name is Satinder Singh and following are my hobbies</p>`;
-    details[`target`][`style`][`padding`] = `10px`;
     details[`target`][`style`][`color`] = `darkGreen`;
 }
 // name_id grabs the id name from document to make some changes when user hover the mouse over what is my name?
@@ -31,16 +40,38 @@ for (counter = 0; counter < hobbies.length; counter++) {
     hobbies[counter][`innerHTML`] += `<p>This is one of my favorite hobby</p>`;
     hobbies[counter][`style`][`color`] = `darkGray`;
 }
-
-function city_click(details){
+// below function will change the background color of the element, add text and font-size when element is clicked
+function city_click(details) {
+    details[`target`][`style`][`backgroundColor`] = `red`;
     details[`target`][`innerHTML`] += `, Capital city of Alberta`;
+    details[`target`][`style`][`fontSize`] = `2rem`;
 }
+// let city_id will grab the element id info_city and give this element to a city_click function
 let city_id = document.getElementById(`info_city`);
 city_id.addEventListener(`click`, city_click);
 
-function age_click(details){
-    details[`target`][`innerHTMl`] += `, I was born in 1994`;
-}
+// below function will change the background color of the element, add text and font-size when element is clicked
+function age_click(details) {
+    details[`target`][`style`][`backgroundColor`] = `green`;
+    details[`target`][`innerHTML`] += `, I was born in 1994`;
+    details[`target`][`style`][`fontSize`] = `2rem`;
 
+}
+// let age_id will grab the info age id and give it to a age_click function
 let age_id = document.getElementById(`info_age`);
 age_id.addEventListener(`click`, age_click);
+
+
+// below function will change the background color of the element, add text and font-size when element is clicked
+function nationality_click(details) {
+    details[`target`][`style`][`backgroundColor`] = `blue`;
+    details[`target`][`innerHTML`] += `,I came from India in 2015`;
+    details[`target`][`style`][`fontSize`] = `2rem`;
+
+}
+// let nationality id will grab the info_natioanality by its id and give it to the function nationality click 
+let nationality_id = document.getElementById(`info_nationality`);
+nationality_id.addEventListener(`click`, nationality_click);
+
+
+
