@@ -32,8 +32,15 @@ for (counter = 0; counter < hobbies.length; counter++) {
     hobbies[counter][`style`][`color`] = `darkGray`;
 }
 
-function city_space(details){
+function city_click(details){
     details[`target`][`innerHTML`] += `, Capital city of Alberta`;
 }
 let city_id = document.getElementById(`info_city`);
-city_id.addEventListener(`click`, city_space);
+city_id.addEventListener(`click`, city_click);
+
+function age_click(details){
+    details[`target`][`innerHTMl`] += `, I was born in 1994`;
+}
+
+let age_id = document.getElementById(`info_age`);
+age_id.addEventListener(`click`, age_click);
