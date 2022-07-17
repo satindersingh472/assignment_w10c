@@ -1,14 +1,3 @@
-function body_space(details) {
-    let count = 0;
-    for(count =0; count<details.length; count++){
-        details[`target`][counter][`style`][`width`] = `60vw`;
-        details[`target`][counter][`style`][`margin`] = `auto`;
-    }
-    
-}
-let body_tag = document.getElementById(`body`);
-    body_tag.addEventListener(`click`, body_space);
-
 
 
 // below function will change the html content and font color,padding and size when the user will click what is this website for? 
@@ -73,5 +62,7 @@ function nationality_click(details) {
 let nationality_id = document.getElementById(`info_nationality`);
 nationality_id.addEventListener(`click`, nationality_click);
 
+let link_id = document.getElementById(`link`);
+link_id[`innerHTML`] += `,this is my favourite website`;
 
 
