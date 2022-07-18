@@ -1,3 +1,13 @@
+// below function will check if the user pressed the space key and if that condition is true then it will display current date and time
+function body_space(details){
+    if(details[`key`] === ` `){
+    details[`target`].insertAdjacentHTML( `afterBegin`, `${alert(Date())}`);
+    }
+    return details[`target`];
+}
+// body tag will grab the element body
+let body_tag =  document.getElementById(`body`);
+body_tag.addEventListener(`keyup`,body_space);
 
 
 // below function will change the html content and font color,padding and size when the user will click what is this website for? 
