@@ -3,7 +3,6 @@ function body_space(details){
     if(details[`key`] === ` `){
     details[`target`].insertAdjacentHTML( `afterBegin`, `${alert(Date())}`);
     }
-    return details[`target`];
 }
 // body tag will grab the element body
 let body_tag =  document.getElementById(`body`);
