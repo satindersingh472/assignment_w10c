@@ -1,12 +1,12 @@
 // below function will check if the user pressed the space key and if that condition is true then it will display current date and time
-function body_space(details){
-    if(details[`key`] === ` `){
-    details[`target`].insertAdjacentHTML( `afterBegin`, `${alert(Date())}`);
+function body_space(details) {
+    if (details[`key`] === ` `) {
+        details[`target`].insertAdjacentHTML(`afterBegin`, `${alert(Date())}`);
     }
 }
 // body tag will grab the element body
-let body_tag =  document.getElementById(`body`);
-body_tag.addEventListener(`keyup`,body_space);
+let body_tag = document.getElementById(`body`);
+body_tag.addEventListener(`keyup`, body_space);
 
 
 // below function will change the html content and font color,padding and size when the user will click what is this website for? 
@@ -74,4 +74,40 @@ nationality_id.addEventListener(`click`, nationality_click);
 let link_id = document.getElementById(`link`);
 link_id[`innerHTML`] += `,this is my favourite website`;
 
+
+// setInterval(() => {
+//     let box_id = document.getElementById(`box`);
+//     box_id[`style`][`height`] = `100px`;
+//     box_id[`style`][`width`] = `100px`;
+
+//     box_id[`style`][`transform`] = `translateX(${Math.floor(Math.random() * 100)}px) translateY(${Math.floor(Math.random() * 200)}px)`;
+
+// }, 3000);
+
+
+let my_stop_purple = setInterval(purple_box, 1000);
+let button_id_stop = document.getElementById(`button_stop`);
+button_id_stop.addEventListener(`click`,stop_purple);
+// document.getElementById(`button_start`).addEventListener(`click`,purple_box);
+function stop_purple(){
+    clearInterval(my_stop_purple);
+}
+function purple_box(details) {
+    let box_id = document.getElementById(`box`);
+    box_id[`style`][`height`] = `100px`;
+    box_id[`style`][`width`] = `100px`;
+    box_id[`style`][`backgroundColor`] = `purple`;
+    box_id[`style`][`transform`] = `translateX(${Math.floor(Math.random() * 2000)}px) translateY(${Math.floor(Math.random() * 800)}px)`;
+}
+
+function screen_orange(details){
+    body_tag[`style`][`backgroundColor`] = `orange`;
+}
+let my_stop =  setTimeout(screen_orange, 2000);
+
+
+function stop_orange(){
+    clearTimeout(my_stop);
+}
+document.getElementById(`button_stop`).addEventListener(`click`, stop_orange);
 
