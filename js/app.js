@@ -74,38 +74,34 @@ nationality_id.addEventListener(`click`, nationality_click);
 let link_id = document.getElementById(`link`);
 link_id[`innerHTML`] += `,this is my favourite website`;
 
-
-// setInterval(() => {
-//     let box_id = document.getElementById(`box`);
-//     box_id[`style`][`height`] = `100px`;
-//     box_id[`style`][`width`] = `100px`;
-
-//     box_id[`style`][`transform`] = `translateX(${Math.floor(Math.random() * 100)}px) translateY(${Math.floor(Math.random() * 200)}px)`;
-
-// }, 3000);
-
-
-let my_stop_purple = setInterval(purple_box, 1000);
-let button_id_stop = document.getElementById(`button_stop`);
-button_id_stop.addEventListener(`click`,stop_purple);
-// document.getElementById(`button_start`).addEventListener(`click`,purple_box);
+// below code will show a purple box moving every 3 seconds and if stop button is pressed it will stop the purple box from moving
+// my_stop_purple stores the value of a setinterval for purple box function with 3 seconds loop
+let my_stop_purple = setInterval(purple_box, 3000);
+// stop purple function will help to stop the purple box with clearinterval built in function
 function stop_purple(){
+    // clear interval function will use the value stored in my stop purple variable and stop the purple box
     clearInterval(my_stop_purple);
 }
-function purple_box(details) {
+// button is stop is storing the value for button_stop id
+let button_id_stop = document.getElementById(`button_stop`);
+// by clicking the stop button stop purple function will get activated
+button_id_stop.addEventListener(`click`,stop_purple);
+// function purple box have all the details to move purple box
+function purple_box() {
     let box_id = document.getElementById(`box`);
     box_id[`style`][`height`] = `100px`;
     box_id[`style`][`width`] = `100px`;
     box_id[`style`][`backgroundColor`] = `purple`;
-    box_id[`style`][`transform`] = `translateX(${Math.floor(Math.random() * 2000)}px) translateY(${Math.floor(Math.random() * 800)}px)`;
+    box_id[`style`][`transform`] = `translateX(${Math.floor(Math.random() * 400)}px) translateY(${Math.floor(Math.random() * 400)}px)`;
+    box_id[`style`][`transformStyle`]
 }
-
+// screen orange function help make body background orange
 function screen_orange(details){
     body_tag[`style`][`backgroundColor`] = `orange`;
 }
-let my_stop =  setTimeout(screen_orange, 2000);
-
-
+// let my stop variable stores the value for settimeout function
+let my_stop =  setTimeout(screen_orange, 15000);
+// stop Orange will stop the screen getting orange with help of cleartimeout built in function
 function stop_orange(){
     clearTimeout(my_stop);
 }
